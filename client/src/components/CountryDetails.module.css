@@ -1,0 +1,48 @@
+.bod{
+    background-image: url("https://s1.1zoom.me/b5043/425/China_Jiuzhaigou_park_Parks_Lake_Mountains_Autumn_530368_1920x1080.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 50px;
+   
+}
+.car{  
+   border: black;
+    display: inline-block ;
+  justify-content: left;
+      padding: 15px;
+      border: 1px solid;
+      color: white;
+    border-radius: 10px;
+     font-family: 'Special Elite', cursive;
+   width: 25%;
+  margin: 20px;
+
+       }
+     
+.car:hover{
+background-color: rgba(216, 243, 141, 0.548);
+color: black;
+
+}
+.activities{
+    
+   border: black;
+    display: inline-block ;
+    justify-content: right;
+    padding: 10px;
+      border: 1px solid;
+      color: white;
+      background-color: transparent;
+    border-radius: 10px;
+     font-family: 'Special Elite', cursive;
+   width: 25%;
+   margin: 20px;
+   padding: 15px;
+ 
+ 
+}
+.activities:hover{
+   background-color: rgba(216, 243, 141, 0.568);
+   color: black;
+}
