@@ -14,6 +14,7 @@ export default function SearchBar() {
 
     }
     function handleSubmit(e) {
+        console.log(e.target.value)
         e.preventDefault()
         dispatch(getNameCountries(name)) //name= estado local
         setName("");

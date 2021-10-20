@@ -18,11 +18,11 @@ export default function Home() {
 
     //paginado
     const [currentPage, setCurrentPage] = useState(1); // estado con pagina actual y un estado que me setee la pagin actual.
-    const [countriesPerPage, setCountriesPerPage] = useState(10)    // setea mis paises por página que van a hacer 10
-    const indexOfLastCountry = currentPage * countriesPerPage //10   indice de mi ultimo pais por paises por pagina
-    const indexOfFirstCountry = indexOfLastCountry - countriesPerPage // indice del ultimo poais menos paises por pagina =0
-    const currentCountries = allCountries.slice(indexOfFirstCountry, indexOfLastCountry) // arreglo del estado de paises que me trae del reducer el estado countries
-    //slice= de un arreglo toma una porcion dependiendo de lo que le pase por parametro.
+    const [countriesPerPage, setCountriesPerPage] = useState(10)
+    const indexOfLastCountry = currentPage * countriesPerPage //10  
+    const indexOfFirstCountry = indexOfLastCountry - countriesPerPage
+    const currentCountries = allCountries.slice(indexOfFirstCountry, indexOfLastCountry)
+
 
     //ayuda a renderizar
     const paginado = (pageNumber) => {
@@ -83,8 +83,8 @@ export default function Home() {
                 </select>
                 <select onChange={(e) => handleSortPopulation(e)}>
                     <option value="poblation">Población</option>
-                    <option value="asc">Mayor pablacion</option>
-                    <option value="des">Menor Poblacion</option>
+                    <option value="asc">Menor pablacion</option>
+                    <option value="des">Mayor Poblacion</option>
                 </select>
                 <label htmlFor="filtroContinente">Continentes</label>
                 <select name="filtroContinente" onChange={e => handlerFilterContinent(e)}>

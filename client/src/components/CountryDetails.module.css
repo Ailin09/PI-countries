@@ -12,7 +12,9 @@
   justify-content: left;
       padding: 15px;
       border: 1px solid;
-      color: white;
+      background-color: rgba(149, 243, 141, 0.548);
+color: black;
+   
     border-radius: 10px;
      font-family: 'Special Elite', cursive;
    width: 25%;
@@ -21,8 +23,8 @@
        }
      
 .car:hover{
-background-color: rgba(216, 243, 141, 0.548);
-color: black;
+background-color:transparent;
+color: white;
 
 }
 .activities{
@@ -33,16 +35,17 @@ color: black;
     padding: 10px;
       border: 1px solid;
       color: white;
-      background-color: transparent;
+    
     border-radius: 10px;
      font-family: 'Special Elite', cursive;
    width: 25%;
    margin: 20px;
    padding: 15px;
- 
+   background-color: rgba(149, 243, 141, 0.548);
+color: black;
  
 }
 .activities:hover{
-   background-color: rgba(216, 243, 141, 0.568);
+   background-color: transparent;
    color: black;
 }

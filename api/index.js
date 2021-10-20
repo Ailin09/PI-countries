@@ -19,7 +19,7 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-//const { getApiInfo } = require("./src/functions/utils"); funcion utilitaria para cargar la db con los datos de la api
+//const { getApiInfo } = require("./src/functions/utils"); funcion utilitaria 
 const { get } = require('superagent');
 
 // Syncing all the models at once.

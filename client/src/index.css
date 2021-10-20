@@ -5,8 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(255, 29, 0);
-  background: radial-gradient(circle, rgba(255,29,0,1) 0%, rgba(7,241,199,1) 100%);
+
+  background-image: url("https://d2m1kqghccc19k.cloudfront.net/wp-content/uploads/2019/10/01180454/QLK%C3%91.jpg");
+  background-repeat: no-repeat;
+ 
 }
 
 code {

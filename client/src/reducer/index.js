@@ -13,11 +13,11 @@ const initialState = {
 function rootReducer(state = initialState, action) {
     switch (action.type) {
         case "GET_COUNTRIES":
-            //necesito un listado de actividades, 
+
             const activities = [];
-            action.payload.forEach(country => { // recorro todos los paises
-                country.activities.forEach(activity => { //recorro todas las actividades de cada pais
-                    const activityFound = activities.find(a => a.name === activity.name)// busco si cada actividad ya está en mi listado de actividades
+            action.payload.forEach(country => {
+                country.activities.forEach(activity => {
+                    const activityFound = activities.find(a => a.name === activity.name)
                     if (!activityFound) activities.push(activity);
                 });
                 country.activities.push(activities)
@@ -112,6 +112,11 @@ function rootReducer(state = initialState, action) {
                 ...state,
                 countries: sortedPopulation
             };
+        case "RESET_DETAIL":
+            return {
+                ...state,
+                details: []
+            }
 
         default:
             return state;

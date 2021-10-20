@@ -1,6 +1,6 @@
 import axios from "axios";
-
-export function getCountries() { //conexion entre el back y el front
+//conexion
+export function getCountries() {
     return async function (dispatch) {
         var json = await axios.get('http://localhost:3001/countries');
         return dispatch({
@@ -8,8 +8,10 @@ export function getCountries() { //conexion entre el back y el front
             payload: json.data
         })
     }
-
 }
+
+
+
 export const getNameCountries = (name) => {
     return async function (dispatch) {
         try {
@@ -73,3 +75,8 @@ export const filterByPopulation = (payload) => {
 };
 
 
+export const resetDetail = () => {
+    return {
+        type: "RESET_DETAIL",
+    }
+}

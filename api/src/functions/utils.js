@@ -2,7 +2,7 @@ const axios = require("axios");
 const { Country } = require("../db");
 
 
-const getApiInfo = async () => { //me traigo lo de la api
+const getApiInfo = async () => { //api
     const apiUrl = await axios.get("https://restcountries.com/v2/all")
     const apiInfo = await apiUrl.data.map(e => {
 
@@ -22,7 +22,7 @@ const getApiInfo = async () => { //me traigo lo de la api
             // refrescamos
         }
     });
-    await Country.bulkCreate(apiInfo); //le pega a la api y te llena la base de datos
+    await Country.bulkCreate(apiInfo);
 }
 
 module.exports = {

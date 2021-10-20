@@ -43,6 +43,7 @@ const getAllCountryByIdDb = async (id) => {
 const getCountryById = async (req, res) => {
     try {
         const { idPais } = req.params;
+
         if (idPais.length === 3) {
             const country = await getAllCountryByIdDb(idPais.toUpperCase())
             if (country.length) {
