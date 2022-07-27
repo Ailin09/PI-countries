@@ -1,51 +1,88 @@
-.bod{
-    background-image: url("https://s1.1zoom.me/b5043/425/China_Jiuzhaigou_park_Parks_Lake_Mountains_Autumn_530368_1920x1080.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    padding: 50px;
-   
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  padding-top: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
-.car{  
-   border: black;
-    display: inline-block ;
-  justify-content: left;
-      padding: 15px;
-      border: 1px solid;
-      background-color: rgba(149, 243, 141, 0.548);
-color: black;
-   
-    border-radius: 10px;
-     font-family: 'Special Elite', cursive;
-   width: 25%;
-  margin: 20px;
-
+ .car{ 
+      width: 500px;
+      margin-top: 2rem;
+      padding: 3rem;
+      border-radius: 3px;
+      background: rgba(148, 139, 139, 0.3);
+      box-shadow: 0px 32px 0 rgba(9, 17, 122, 0.37);
+      backdrop-filter: blur(2px);
+      border: 1px solid  rgba(92, 86, 86, 0.3);
+      color: white;
        }
      
-.car:hover{
-background-color:transparent;
-color: white;
+.title{
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: rgba(194, 192, 192, 0.3);
+  box-shadow: 0px 10px 0 rgba(6, 18, 107, 0.37);
+  backdrop-filter: blur(2px);
+  border: 1px solid  rgba(92, 86, 86, 0.3);
+  color: white;
+  font-size: 16px;
+}
+
+.activities{
+  width: 500px;
+  margin-top: 2rem;
+  padding: 3rem;
+  margin-left: 15px;
+  border-radius: 3px;
+  background: rgba(148, 139, 139, 0.3);
+  box-shadow: 0px 32px 0 rgba(3, 10, 107, 0.37);
+  backdrop-filter: blur(2px);
+  border: 1px solid  rgba(92, 86, 86, 0.3);
+  color: white;
+}
+.activity{
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: rgba(93, 94, 99, 0.3);
+  box-shadow: 0px 10px 0 rgba(6, 18, 107, 0.37);
+  backdrop-filter: blur(2px);
+  border: 1px solid  rgba(92, 86, 86, 0.3);
+  color: white;
+  font-size: 16px;
+}
+.countryDetail{
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: rgba(93, 94, 99, 0.3);
+  box-shadow: 0px 10px 0 rgba(6, 18, 107, 0.37);
+  backdrop-filter: blur(2px);
+  border: 1px solid  rgba(92, 86, 86, 0.3);
+  color: white;
+  font-size: 16px;
+}
+h1{
+  font-size: 40px;
+  padding: 5px;
 
 }
-.activities{
-    
-   border: black;
-    display: inline-block ;
-    justify-content: right;
-    padding: 10px;
-      border: 1px solid;
-      color: white;
-    
-    border-radius: 10px;
-     font-family: 'Special Elite', cursive;
-   width: 25%;
-   margin: 20px;
-   padding: 15px;
-   background-color: rgba(149, 243, 141, 0.548);
-color: black;
- 
+h4{
+  font-size: 20px;
+  padding: 5px;
+
 }
-.activities:hover{
-   background-color: transparent;
-   color: black;
+h2{
+  font-size: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.botonDetail{
+justify-content: left;
+  margin-top: 1rem;
+
 }

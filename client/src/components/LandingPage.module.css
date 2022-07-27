@@ -1,26 +1,4 @@
-.body{
-color: rgb(0, 0, 0);
-font-size:  24px;;
-background-image: url("https://1.bp.blogspot.com/-GEALVUVQR9E/XglQw7cO6GI/AAAAAAAAADc/hudIOb_lBBcujlj-JrgyVm2GeauXyBUOACLcBGAsYHQ/s1600/025f29a640db04a067d7a540a7b4d004.gif");
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-padding: 200px;
-font-family: 'Special Elite', cursive;
-
+.title{
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
-
-.button {
-    border-radius: 4px;
-    background-color: #f4511e;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-  }
-  

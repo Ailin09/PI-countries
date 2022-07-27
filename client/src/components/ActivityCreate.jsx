@@ -66,7 +66,7 @@ export default function ActivityCreate() {
         }))
     }
     function handleSeason(e) {
-        console.log(e.target.value)
+       
         setInput({
             ...input,
             season: e.target.value
@@ -90,7 +90,7 @@ export default function ActivityCreate() {
 
     useEffect(() => {
         dispatch(getCountries());
-    }, []);
+    }, [dispatch]);
 
     function handleDelete(el) {
         setInput({
@@ -101,69 +101,75 @@ export default function ActivityCreate() {
     return (
         <div className={styles.body}>
 
+                  
             <div >
                 <form onSubmit={(e) => handleSubmit(e)} >
                     <div className={styles.card}>
-                        <h1>Crea tu actividad aquí  ↓</h1>
+                        <h1>Crea tu actividad turística</h1>
 
                         <div>
 
-                            <label>Nombre: </label>
+                            <h3>Nombre: </h3>
 
-                            <br />
+                           
                             <input type="text" value={input.name} name="name" onChange={(e) => handleChange(e)} />
                             {errors.name && (
                                 <p className={styles.error}>{errors.name}</p>
                             )}
                         </div>
-                        <br />
-                        <div className={styles.difficulty}>
+                       <br/>
+                        <div >
+                        <div className={styles.title}>
 
-                            <label>Dificultad: </label>
-                            <br />
-                            <label><input type="checkbox" value="1" name="Uno" onChange={(e) => handleCheck(e)} />1</label>
-                            <label><input type="checkbox" value="2" name="Dos" onChange={(e) => handleCheck(e)} />2</label>
-                            <label><input type="checkbox" value="3" name="Tres" onChange={(e) => handleCheck(e)} />3</label>
-                            <label><input type="checkbox" value="4" name="Cuatro" onChange={(e) => handleCheck(e)} />4</label>
-                            <label><input type="checkbox" value="5" name="Cinco" onChange={(e) => handleCheck(e)} />5</label>
+                            <h3>Dificultad: </h3>
+                          </div>
+                            <div className={styles.inputs}>
+
+                           
+                            <label><input className={styles.difficulty} type="checkbox" value="1" name="Uno" onChange={(e) => handleCheck(e)} />1</label>
+                            <label><input className={styles.difficulty} type="checkbox" value="2" name="Dos" onChange={(e) => handleCheck(e)} />2</label>
+                            <label><input className={styles.difficulty} type="checkbox" value="3" name="Tres" onChange={(e) => handleCheck(e)} />3</label>
+                            <label><input className={styles.difficulty} type="checkbox" value="4" name="Cuatro" onChange={(e) => handleCheck(e)} />4</label>
+                            <label><input className={styles.difficulty} type="checkbox" value="5" name="Cinco" onChange={(e) => handleCheck(e)} />5</label>
                             {errors.difficulty && (
                                 <p className={styles.error}>{errors.difficulty}</p>
                             )}
+                            </div>
                         </div>
-                        <br />
+                        <br/>
                         <div className={styles.duration}>
 
-                            <label>Duración: </label>
-                            <br />
+                            <h3>Duración: </h3>
+                           
                             <input type="text" value={input.duration} name="duration" onChange={(e) => handleChange(e)} />
                             {errors.duration && (
                                 <p className={styles.error}>{errors.duration}</p>
                             )}
                         </div>
-                        <br />
-                        <div className={styles.season}>
+                        <br/>
+                        <div >
 
-                            <label>Temporada del año: </label>
-                            <br />
-                            <label><input type="checkbox" value="Spring" name="Spring" onChange={(e) => handleSeason(e)} />Primavera</label>
-                            <label><input type="checkbox" value="Summer" name="Summer" onChange={(e) => handleSeason(e)} />Verano</label>
-                            <label><input type="checkbox" value="Autumn" name="Autumn" onChange={(e) => handleSeason(e)} />Otoño</label>
-                            <label><input type="checkbox" value="Winter" name="Winter" onChange={(e) => handleSeason(e)} />Invierno</label>
+                            <h3>Temporada del año: </h3>
+                           
+                            <label><input className={styles.season} type="checkbox" value="Spring" name="Spring" onChange={(e) => handleSeason(e)} />Primavera</label>
+                            <label><input className={styles.season} type="checkbox" value="Summer" name="Summer" onChange={(e) => handleSeason(e)} />Verano</label>
+                            <label><input className={styles.season} type="checkbox" value="Autumn" name="Autumn" onChange={(e) => handleSeason(e)} />Otoño</label>
+                            <label><input className={styles.season} type="checkbox" value="Winter" name="Winter" onChange={(e) => handleSeason(e)} />Invierno</label>
                             {errors.season && (
                                 <p className={styles.error}>{errors.season}</p>
                             )}
                         </div>
-                        <br />
+                        <br/>
                         <div className={styles.country}>
-                            <label>Paises: </label>
-                            <br />
-                            <select onChange={(e) => handleSelect(e)}>
+                            <h3>País/Países: </h3>
+                           
+                            <select  className={styles.selectt} onChange={(e) => handleSelect(e)}>
                                 {countriesFounded.map((country) => (
                                     <option value={country.name}>{country.name}</option>
                                 ))}
                             </select >
                         </div>
-                        <br />
+                        <br/>
                         {input.countries.map((e) => (
                             <div >
                                 <p>{e}</p>
@@ -175,9 +181,12 @@ export default function ActivityCreate() {
                                 >X</button>
                             </div>
                         ))}
-                        <button type="submit" >Crear actividad turística</button>
+                        <div className={styles.botones}>
+                            <Link to="/home" ><button className={styles.boton}>Volver</button></Link>
+                        <button className={styles.boton2} type="submit" >Crear actividad turística</button>
+                        </div>
 
-                        <Link to="/home"><button>Volver</button></Link>
+                       
                     </div>
 
                 </form>

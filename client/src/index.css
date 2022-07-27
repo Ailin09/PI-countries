@@ -1,14 +1,25 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Open Sans', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Space Mono', monospace;
 
-  background-image: url("https://d2m1kqghccc19k.cloudfront.net/wp-content/uploads/2019/10/01180454/QLK%C3%91.jpg");
-  background-repeat: no-repeat;
- 
+  color: aliceblue;
 }
 
 code {

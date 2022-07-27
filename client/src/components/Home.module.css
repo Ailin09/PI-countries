@@ -1,83 +1,134 @@
 .body{
-  background-image: url("https://www.entornoturistico.com/wp-content/uploads/2016/01/turismo.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-padding: 30px;
 font-size: 20px;
-font-family: 'Special Elite', cursive;
-
+text-align: center;
+background: rgb(6,5,36);
+background: linear-gradient(90deg, rgba(6,5,36,1) 35%, rgba(0,81,191,1) 100%);
 }
 
-.card{  
+.card{ 
+  padding: 15px; 
 display: inline-flex;
-justify-content: center;
-  padding: 20px;
-width: 13%;
-  margin: 20px;
-  box-shadow: 15px 15px 15px 15px rgba(36, 75, 53, 0.377);
-  color: rgb(255, 254, 255);
-  opacity: 4;
-  background-color:transparent;
- border-radius: 10%;
- font-family: 'Special Elite', cursive;
-text-decoration: none;
-transition: all 0.25s;
-
+width: 250px;
+height: 350px;
+margin: 25px;
+margin-left: 80px;
+margin-right: 80px;
+border-radius: 10px;
+background: rgba(148, 139, 139, 0.3);
+box-shadow: 0px 15px 0 rgba(3, 10, 107, 0.37);
+backdrop-filter: blur(3px);
+   } 
+   .link{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 25px;
+ 
    }
     .card:hover {
-        background-image: url("https://img.freepik.com/foto-gratis/nube-blanca-cielo-azul_74190-7709.jpg?size=626&ext=jpg");
-        background-position: center;
-        box-shadow: 0px 12px 16px rgb(0,0,0.2);
+        box-shadow: 0px 12px 25px #0f0592;
         background-size: cover;
-        margin-top: 30px;
           transform: translateY(-15px);
          
-         background-color: black;
+         background-color: rgb(6, 1, 37);
          
-    }
+    } 
+  .h1{
+    margin-top: 30px;
+    font-size: 50px;
+      font-family: 'Open Sans', sans-serif;
+  }
+  button{
+    padding: 15px;
+    border-radius: 5px;
+    background: rgba(250, 244, 244, 0.3);
+    box-shadow: 0px 10px 0 rgba(6, 18, 107, 0.37);
+    backdrop-filter: blur(2px);
+    border: 1px solid  rgba(92, 86, 86, 0.3);
+    color: white;
+    font-size: 16px;
+     
+  }
+  button:active{
+    box-shadow: 0px 12px 25px #05013a;
+    background-size: cover;
+     
+     background-color: rgb(78, 77, 88);
+     
+  }
+  button:hover{
+     background-color: rgb(40, 36, 66);
+  }
   
-    button{
-      padding: 15px 25px;
-      font-size: 18px;
-      font-family: 'Special Elite', cursive;
-      text-align: center;
-      cursor: pointer;
-      outline: none;
-      color: rgb(15, 14, 14);
-margin: 2px;
-margin-bottom: 10px;
+  .boton{
+      box-shadow: 0px 12px 25px #0f0592;
+    margin-right: 10px;
+    background-color: rgb(6, 1, 37);
+       
+  }
 
-text-shadow: 1px 1px 0px #7CACDE;
-box-shadow: 1px 1px 1px #BEE2F9;
-padding: 10px 25px;
-border-radius: 10px;
-border: 2px solid #3866A3;
-background: rgba(7,241,199,1);
-background: linear-gradient(to top, rgba(7,241,199,1), #468CCF);
-    }
-    button:hover {
-      color: #14396A !important;
-      background: #468CCF;
-      background: linear-gradient(to top, #468CCF, rgba(7,241,199,1));
-    }
+  .boton2{
+      box-shadow: 0px 12px 25px #1103d4;
+    margin-right: 10px;
+    background-color: rgb(6, 1, 37);
+       
+  }
 
-button:active {
-  background-color: rgb(0, 29, 90);
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+
+.select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance:none;
+  outline: 0;
+  box-shadow:none;
+  border:  none !important;
+  padding:10px;
+  color:#fff;
+  font-family: 'Open Sans', sans-serif;
+}
+select::-ms-expand {
+  display: none;
 }
 select {
-  font-family: 'Special Elite', cursive;
-  background: rgb(175, 233, 235);
-  text-align: center;
-
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 5px;
-  font-size: 17px;
-  height: 30px;
-  padding: 5px;
- 
-
+  position: relative;
+  display: flex;
+  width: 30rem;
+  background: #030127;
+  overflow: hidden;
+  border-radius: .25em;
+  color: whitesmoke;
+  font-size: 16px;
+  border: 1px solid rgb(46, 46, 46);
 }
-select:focus{ outline: none;}
+select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #2b2e2e;
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+}
 
+
+.switch{
+  background: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  
+}
+
+.filter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

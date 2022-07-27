@@ -1,0 +1,19 @@
+.countryCards{
+  display: flex;
+
+  justify-content: center;
+  padding: 30px;
+}
+
+.cardTitle {
+display: flex;
+flex-direction: column;
+text-align: left;
+padding: 25px;
+
+}
+ .img{
+  width: 250px;
+  height: 180px;
+  max-width: 100%;
+}

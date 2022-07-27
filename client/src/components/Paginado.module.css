@@ -5,19 +5,19 @@ font-size: medium;
     
 }
 .Paginado a{
-  font-size:15px;
-  font-weight:bold;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #c1cfdd;
-  float: left;
-  padding: 8px;
-  text-decoration: none;
-  transition: background-color .3s;
-  border: 1px solid rgb(0, 0, 0);
-  margin: 0 4px;
-border-radius: 25%;
+  box-shadow: 0px 5px 10px #0f0592;
+margin-right: 5px;
+border-radius: 5px;
+background-color: rgb(6, 1, 37);
+   padding: 13px;
 }
 .Paginado a:hover{
-  background-color: #22a7be;
+  background-color: #0a0158;
 }
-
+  
+.boton{
+  box-shadow: 0px 12px 25px #0f0592;
+margin-right: 10px;
+background-color: rgb(6, 1, 37);
+   
+}

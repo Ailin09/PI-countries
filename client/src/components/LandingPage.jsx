@@ -1,22 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./LandingPage.module.css"
-
+import './style.css'
 export default function LandingPage() {
     return (
-        <div className={styles.body}>
-            <div>
+      <div >
+        <h1>Bienvenidos a la App del Mundo</h1>
+        <h3 className={styles.title} >Aquí podrás buscar, filtrar y ordenar todos los países, obtener información de cada uno así como también crear tus propias actividades turísticas.</h3>
+      <div className="wrapper">
 
-                <h1>Por fin vacaciones!!!</h1>
-                <h3>Bienvenido a tu diario online de viajes</h3>
-
-                <Link to="/home">
-
-                    <button>Has tus anotaciones aquí</button>
-
-                </Link>
-            </div>
+        <Link to="/home">
+         <div >
+      <div className="earth day"></div>
+      <div className="earth night"></div>
+    </div>
+      </Link>
+           
         </div >
+        </div >
+      
 
     )
 }
