@@ -14,17 +14,18 @@ export default function SearchBar() {
 
     }
     function handleSubmit(e) {
+       
         e.preventDefault()
-        dispatch(getNameCountries(name)) //name= estado local
+        dispatch(getNameCountries(name)) 
         setName("");
     }
     return (
         <div>
-            <input className={style.input}
+            <input className={style.inputt}
                 type="text"
                 placeholder="Buscar..."
                 onChange={(e) => handleInputChange(e)} />
-            <button type="submit" onClick={(e) => handleSubmit(e)}>Buscar</button>
+            <button type="submit" onClick={(e) => handleSubmit(e)} className={style.boton}>Buscar</button>
         </div>
     )
 }

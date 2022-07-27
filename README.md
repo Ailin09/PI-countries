@@ -100,27 +100,27 @@ __Ruta principal__: debe contener
   - Imagen de la bandera
   - Nombre
   - Continente
-- [ ] Botones/Opciones para filtrar por continente y por tipo de actividad turística
+- [x] Botones/Opciones para filtrar por continente y por tipo de actividad turística
 - [x] Botones/Opciones para ordenar tanto ascendentemente como descendentemente los países por orden alfabético y por cantidad de población
 - [x] Paginado para ir buscando y mostrando los siguientes paises, 10 paises por pagina, mostrando los primeros 9 en la primer pagina.
 
 __Ruta de detalle de país__: debe contener
-- [ ] Los campos mostrados en la ruta principal para cada país (imagen de la bandera, nombre, código de país de 3 letras y continente)
-- [ ] Código de país de 3 letras (id)
-- [ ] Capital
-- [ ] Subregión
-- [ ] Área (Mostrarla en km2 o millones de km2)
-- [ ] Población
-- [ ] Actividades turísticas con toda su información asociada
+- [x] Los campos mostrados en la ruta principal para cada país (imagen de la bandera, nombre, código de país de 3 letras y continente)
+- [x] Código de país de 3 letras (id)
+- [x] Capital
+- [x] Subregión
+- [x] Área (Mostrarla en km2 o millones de km2)
+-[x] Población
+- [x] Actividades turísticas con toda su información asociada
 
 __Ruta de creación de actividad turística__: debe contener
-- [ ] Un formulario __controlado__ con los siguientes campos
+- [x] Un formulario __controlado__ con los siguientes campos
   - Nombre
   - Dificultad
   - Duración  
   - Temporada
-- [ ] Posibilidad de seleccionar/agregar varios países en simultaneo
-- [ ] Botón/Opción para crear una nueva actividad turística
+- [x] Posibilidad de seleccionar/agregar varios países en simultaneo
+- [x] Botón/Opción para crear una nueva actividad turística
 
 #### Base de datos
 

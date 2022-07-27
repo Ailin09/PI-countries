@@ -7,32 +7,37 @@ import Card from "./Card";
 import style from "./Home.module.css";
 import Paginado from "./Paginado";
 import SearchBar from "./SearchBar";
+import cloneDeep from "lodash.clonedeep"
 
 export default function Home() {
     const dispatch = useDispatch();
     const allCountries = useSelector((state) => state.countries) // useSelector me trae todo lo que está en el estado de countries
+    // eslint-disable-next-line no-unused-vars
     const [orden, setOrden] = useState('');
     const [filterContinent, setFilterContinent] = useState("All")
     const [filterSeason, setFilterSeason] = useState("All")
-    //logica de los estados
+
 
     //paginado
     const [currentPage, setCurrentPage] = useState(1); // estado con pagina actual y un estado que me setee la pagin actual.
-    const [countriesPerPage, setCountriesPerPage] = useState(10)    // setea mis paises por página que van a hacer 10
-    const indexOfLastCountry = currentPage * countriesPerPage //10   indice de mi ultimo pais por paises por pagina
-    const indexOfFirstCountry = indexOfLastCountry - countriesPerPage // indice del ultimo poais menos paises por pagina =0
-    const currentCountries = allCountries.slice(indexOfFirstCountry, indexOfLastCountry) // arreglo del estado de paises que me trae del reducer el estado countries
-    //slice= de un arreglo toma una porcion dependiendo de lo que le pase por parametro.
+    const [countriesPerPage, setCountriesPerPage] = useState(10)
+    const indexOfLastCountry = currentPage * countriesPerPage //10  
+    const indexOfFirstCountry = indexOfLastCountry - countriesPerPage
+    const currentCountries = allCountries.slice(indexOfFirstCountry, indexOfLastCountry)
+    const allCountriesCopy = cloneDeep(allCountries) 
 
-    //ayuda a renderizar
+  
+  
     const paginado = (pageNumber) => {
         setCurrentPage(pageNumber)
-    }
+      }
+    
 
     useEffect(() => {
         dispatch(getCountries()); // = mapdispatchtoprops
         setCountriesPerPage(10)
-    }, [dispatch]) // [] para que no se me genere un loop infinito de llamados
+        setCurrentPage(currentPage)
+    }, [dispatch,currentPage]) // [] para que no se me genere un loop infinito de llamados
 
     //handlers
 
@@ -66,29 +71,38 @@ export default function Home() {
 
     return (
         <div className={style.body}>
+          <div>
+            <h1 className={style.h1}>Países del Mundo </h1>
 
-            <h1>Actividades turísticas de todo el mundo </h1>
-            <button onClick={e => { handlerClick(e) }}>
-                Volver a cargar todos los paises
-            </button>
+          </div>
+             
+            <div className={style.select}>
 
-            <Link to="/activity"><button>
+            <button className={style.boton} onClick={e => { handlerClick(e) }}>
+              Refrescar
+            </button >
+            <Link to="/activity"><button className={style.boton2}>
                 Crear actividad turistica
             </button></Link>
-            <div>
+             
                 <select onChange={(e) => handleSortByAlphabet(e)}>
-
+                <option value="All">Orden Alfabético</option>
                     <option value="asc">A-Z</option>
                     <option value="des">Z-A</option>
                 </select>
+                
+             
+             
                 <select onChange={(e) => handleSortPopulation(e)}>
                     <option value="poblation">Población</option>
-                    <option value="asc">Mayor pablacion</option>
-                    <option value="des">Menor Poblacion</option>
+                    <option value="asc">Menor pablacion</option>
+                    <option value="des">Mayor Poblacion</option>
                 </select>
-                <label htmlFor="filtroContinente">Continentes</label>
+
+             
+             
                 <select name="filtroContinente" onChange={e => handlerFilterContinent(e)}>
-                    <option value="All">Todos</option>
+                    <option value="All">Continentes</option>
                     <option value="Europe">Europa</option>
                     <option value="Oceania">Oceania</option>
                     <option value="Americas">America</option>
@@ -96,33 +110,43 @@ export default function Home() {
                     <option value="Asia">Asia</option>
                     <option value="Antarctic">Antártida</option>
                 </select>
-                <label htmlFor="filtroActividades">Actividades Turísticas</label>
+
+             
+             
+
                 <select name="filtroActividades" onChange={e => handleFilterBySeason(e)}>
-                    <option value="All">Todas</option>
+                    <option value="All">Actividades Turísticas</option>
                     <option value="Summer">Temporada de verano </option>
                     <option value="Autumn">Temporada de otoño </option>
                     <option value="Winter">Temporada de invierno </option>
                     <option value="Spring">Temporada de primavera </option>
                 </select>
+             
+              
 
-                <Paginado
-                    countriesPerPage={countriesPerPage}
-                    allCountries={allCountries.length} //necesito un valor numerico
-                    paginado={paginado}
-                />
                 <SearchBar />
+              
+            
+                </div>
                 {currentCountries.map((e) => {
-                    return (
-
-                        <div key={e.id} className={style.card}>
-                            <Link to={"/countries/" + e.id}>
+                  return (
+                    
+                    <div key={e.id} className={style.card}>
+                            <Link to={"/countries/" + e.id} className={style.link}>
                                 <Card name={e.name} image={e.image} continent={e.continent} id={e.id} />
                             </Link>
                         </div>
                     )
-                })}
+                  })}
+            <Paginado
+                countriesPerPage={countriesPerPage}
+                allCountries={allCountriesCopy.length} //necesito un valor numerico
+                paginado={paginado}
+                currentPage={currentPage}
+                
+              
+            />
             </div>
-        </div>
     )
-
+    
 }

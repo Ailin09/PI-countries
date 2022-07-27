@@ -1,14 +1,22 @@
-input {
-    font-family: 'Special Elite', cursive;
-    background: rgb(239, 240, 240);
-    text-align: left;
-  
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    font-size: 15px;
-    height: 30px;
- 
-   
-  
+.inputt {
+  height: 3em;
+  line-height: 3;
+  background: #030127;
+  overflow: hidden;
+  border-radius: .25em;
+  color: whitesmoke;
+  font-size: 16px;
   }
- input:focus{ outline: none;}
+ .inputt:focus{ outline: none;}
+ .boton {
+  padding: 15px;
+  border-radius: 5px;
+    background: rgba(250, 244, 244, 0.3);
+    box-shadow: 0px 10px 0 rgba(6, 18, 107, 0.37);
+    backdrop-filter: blur(2px);
+    border: 1px solid  rgba(92, 86, 86, 0.3);
+    color: white;
+    font-size: 16px;
+}
+
+
